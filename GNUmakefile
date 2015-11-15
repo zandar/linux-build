@@ -11,7 +11,7 @@ ifneq ($(VERBOSE),1)
 Q := @
 endif
 
-MAKEARGS := -C /home/zandar/programming/linux/linux-torvalds
+MAKEARGS := -C ../linux-torvalds
 MAKEARGS += O=$(if $(patsubst /%,,$(makedir)),$(CURDIR)/)$(patsubst %/,%,$(makedir))
 
 MAKEFLAGS += --no-print-directory
