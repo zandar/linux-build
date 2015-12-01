@@ -11,6 +11,9 @@ ifneq ($(VERBOSE),1)
 Q := @
 endif
 
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabi-
+
 MAKEARGS := -C ../linux-src
 MAKEARGS += O=$(if $(patsubst /%,,$(makedir)),$(CURDIR)/)$(patsubst %/,%,$(makedir))
 
